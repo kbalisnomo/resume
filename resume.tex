@@ -1,0 +1,159 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+    \usepackage{fontawesome} 
+    \usepackage{setspace} 
+    \usepackage[pdfnewwindow=true]{hyperref}
+    \hypersetup{pdfnewwindow}
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+    
+
+%==== Profile ====%
+\vspace*{-5pt}
+\begin{center}
+	{\Huge \scshape {Kyle Philip Balisnomo}}\\
+	Canada $\cdot$ kylebalisnomo@gmail.com $\cdot$ 780-860-0914 \\
+    \href[pdfnewwindow=true]{https://linkedin.com/in/kyle-balisnomo/}{\faLinkedinSquare\ linkedin.com/in/kyle-balisnomo} $\cdot$ \href[pdfnewwindow=true]{https://github.com/kbalisnomo}{\faGithub\ kbalisnomo} \\
+\end{center}
+
+%==== Experience ====%
+\header{Associate Software Developer}
+\vspace{1mm}
+
+\textbf{INVIDI Technologies} \hfill Edmonton, AB, Canada\\
+\textit{Associate Software Developer} \hfill June 2022 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Backend/DevOps focusing on development and operation of a backend service in INVIDI Conexus™, their cloud SaaS platform
+	\item Developed performant, scalable and highly available applications using Kotlin, Docker, K8s and AWS
+    \item Managed infrastructure across 10+ environments using Terraform and Bitbucket Pipelines
+	\item Led development of new feature which allows automated email notifications to be sent to customers regarding advertisement slots yet to be filled
+	\item Joined a 24 hour on-call rotation to ensure systems remain operational
+    \item Mentored new-hires and interns via paired programming
+\end{itemize}
+\textbf{INVIDI Technologies} \hfill Edmonton, AB, Canada\\
+\textit{Software Developer Intern} \hfill May 2020 - September 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Worked within a scrum team of 6 to develop Kotlin microservices in INVIDI Edge™
+	\item Increased test coverage of existing projects by writing unit and integration tests
+	\item Updated CI/CD pipelines used to deploy to AWS
+	\item Utilized Datadog to monitor and debug production systems via queries and dashboards
+	\item Participated in daily stand-ups, sprint planning, retrospectives, and spring demos
+\end{itemize}
+\textbf{University of Alberta} \hfill Edmonton, AB, Canada\\
+\textit{CMPUT 250 Executive Producer} \hfill January 2020 - May 2020\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Assigned a team to provide mentorship and guidance through a term-length project
+	\item Graded and supplied feedback about the quality of student\textquotesingle{}s work
+\end{itemize}
+
+%==== Skills ====%
+\header{Technical Skills}
+\begin{tabular}{ l l } 
+	Programming Languages:    & Kotlin, Java, C, C++, Python, JavaScript, CSS, HTML, Bash                     \\
+	Frameworks and Databases: & React, Django, Dropwizard, Kotest, MySQL, PostgreSQL, Android                 \\
+	Tools:                    & Git, Postman, Datadog, Docker, K8s, Atlassian (Confluence, Jira, Bitbucket),  \\
+                              & AWS(IAM, Lambda, SQS, S3, API Gateway, CloudFormation, RDS)                   \\
+\end{tabular}
+\vspace{2mm}
+
+%==== Projects ====%
+\header{Projects}
+{\textbf{ISSSRewards}} {\sl React, Django} \hfill \href[pdfnewwindow=true]{https:\\isssrewards.com}{\faLink\ isssrewards.com}\\
+\vspace{1mm}
+A rewards-based web application created for The Interdepartmental Science Students’ Society at the
+University of Alberta.
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Created a React frontend and a fully specified REST backend built with Django and PostgreSQL
+	\item Implemented user stories as defined by a product owner to fulfill acceptance criteria
+	\item You can view a video demo of the project \href[pdfnewwindow=true]{https://youtu.be/Fu5am4DxE2Q}{here \faYoutubePlay}
+\end{itemize}
+\vspace*{2mm}
+{\textbf{FeelsBook}} {\sl Android, Firebase} \\
+\vspace{1mm}
+An Android application where users can post, track, and share their moods.
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Created UI mock-ups and storyboard sequences
+	\item Used Firebase to store and retrieve user data
+	\item Utilized Google Maps API to track locations of user posts and display them on a map
+\end{itemize}
+\vspace*{2mm}
+
+
+
+%==== Education ====%
+\header{Education}
+\textbf{University of Alberta}\hfill Edmonton, AB, Canada\\
+BSc with Specialization in Computing Science \hfill September 2017 - May 2022\\
+\vspace{2mm}
+
+\ 
+\end{document}
